@@ -23,25 +23,37 @@ namespace BankSystem
 
       private void btnRegisterOK_Click(object sender, EventArgs e)
       {
-         SqlCommand cmd = new SqlCommand("INSERT INTO RegistrationDb VALUES (@FirstName, @LastName, @Username, @Age, @Password, @Gender, @Address, @MobileNUmber, @Email)", con);
-         cmd.CommandType = CommandType.Text;
-         cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
-         cmd.Parameters.AddWithValue("@LastName", txtLastName.Text);
-         cmd.Parameters.AddWithValue("@Username", txtUsername.Text);
-         cmd.Parameters.AddWithValue("@Age", txtAge.Text);
-         cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
-         cmd.Parameters.AddWithValue("@Gender", rbtnGenderMale.Checked); //return 1
-         cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
-         cmd.Parameters.AddWithValue("@MobileNumber", txtMobileNo.Text);
-         cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+         string gender = "";
+         if (rbtnGenderMale.Checked) { gender = "Male"; }
+         else if (rbtnGenderFemale.Checked) { gender = "Female"; }
+         else { gender = "Other"; }
 
-         con.Open();
-         cmd.ExecuteNonQuery();
-         con.Close();
+         /*if (txtPassword.Equals(txtConfirmPassword))
+         {*/
+            SqlCommand cmd = new SqlCommand("INSERT INTO RegistrationDb VALUES (@FirstName, @LastName, @Username, @Age, @Password, @Gender, @Address, @MobileNUmber, @Email)", con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
+            cmd.Parameters.AddWithValue("@LastName", txtLastName.Text);
+            cmd.Parameters.AddWithValue("@Username", txtUsername.Text);
+            cmd.Parameters.AddWithValue("@Age", txtAge.Text);
+            cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
+            cmd.Parameters.AddWithValue("@Gender", gender);
+            cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
+            cmd.Parameters.AddWithValue("@MobileNumber", txtMobileNo.Text);
+            cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
 
-         MessageBox.Show("Registratioin success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
 
-         ResetFormControls();
+            MessageBox.Show("Registratioin success.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            ResetFormControls();
+         /*}
+         else
+         {
+            MessageBox.Show("Password don't match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+         }*/
       }
 
       private void ResetFormControls()

@@ -15,7 +15,7 @@ namespace BankSystem
 
       public void getRegisterRecords()
       {
-         SqlCommand cmd = new SqlCommand();
+         SqlCommand cmd = new SqlCommand("Select * from RegistrationDb", con);
          DataTable dt = new DataTable();
 
          con.Open();
@@ -32,6 +32,11 @@ namespace BankSystem
          Home home = new Home();
          home.Show();
          Hide();
+      }
+
+      private void Dashboard_Load(object sender, System.EventArgs e)
+      {
+         getRegisterRecords();
       }
    }
 }

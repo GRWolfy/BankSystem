@@ -60,7 +60,8 @@ namespace BankSystem
          this.Controls.Add(this.btnLogout);
          this.Controls.Add(this.RegistrationDataGridView);
          this.Name = "Dashboard";
-         this.Text = "Form1";
+         this.Text = "Dashboard";
+         this.Load += new System.EventHandler(this.Dashboard_Load);
          ((System.ComponentModel.ISupportInitialize)(this.RegistrationDataGridView)).EndInit();
          this.ResumeLayout(false);
 
