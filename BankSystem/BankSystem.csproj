@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection\Connection.cs" />
     <Compile Include="Dashboard\BalanceInquiry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,7 @@
     <Compile Include="Dashboard\Deposit.Designer.cs">
       <DependentUpon>Deposit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\Functions.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
