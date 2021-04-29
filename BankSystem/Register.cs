@@ -102,7 +102,6 @@ namespace BankSystem
          }
          else
          {
-
             btnRegisterOK.Enabled = true;
          }
       }
@@ -132,6 +131,31 @@ namespace BankSystem
             btnRegisterOK.Enabled = false;
             labelEmail.Text = "Invalid email";
          }
+      }
+
+      private void txtUsername_KeyUp(object sender, KeyEventArgs e)
+      {
+         SqlCommand cmd = new SqlCommand("SELECT count (*) FROM RegistrationDb WHERE username=@Username", con);
+         cmd.Parameters.AddWithValue("@Username", txtUsername.Text);
+         con.Open();
+
+         if(txtUsername.Text.Equals(e.KeyCode == Keys.Space))
+         {
+            e.Handled = true;
+         }
+         else if (txtUsername.Text == null || txtUsername.Text == "")
+         {
+            labelUsername.Text = "Enter username";
+         }
+         else if (cmd.ExecuteScalar().ToString() == "1")
+         {
+            labelUsername.Text = "Username already exist";
+         }
+         else
+         {
+            labelUsername.Text = "Valid Username";
+         }
+         con.Close();
       }
    }
 }

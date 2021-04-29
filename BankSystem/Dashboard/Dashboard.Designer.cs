@@ -115,6 +115,7 @@ namespace BankSystem
          this.Controls.Add(this.btnLogout);
          this.Controls.Add(this.RegistrationDataGridView);
          this.Name = "Dashboard";
+         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Dashboard";
          this.Load += new System.EventHandler(this.Dashboard_Load);
          ((System.ComponentModel.ISupportInitialize)(this.RegistrationDataGridView)).EndInit();

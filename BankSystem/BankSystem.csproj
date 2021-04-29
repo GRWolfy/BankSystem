@@ -46,22 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BalanceInquiry.cs">
+    <Compile Include="Dashboard\BalanceInquiry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BalanceInquiry.Designer.cs">
+    <Compile Include="Dashboard\BalanceInquiry.Designer.cs">
       <DependentUpon>BalanceInquiry.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Dashboard\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="Dashboard\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deposit.cs">
+    <Compile Include="Dashboard\Deposit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Deposit.Designer.cs">
+    <Compile Include="Dashboard\Deposit.Designer.cs">
       <DependentUpon>Deposit.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
@@ -70,10 +70,10 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Loan.cs">
+    <Compile Include="Dashboard\Loan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loan.Designer.cs">
+    <Compile Include="Dashboard\Loan.Designer.cs">
       <DependentUpon>Loan.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -82,10 +82,10 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MoneyTransfer.cs">
+    <Compile Include="Dashboard\MoneyTransfer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MoneyTransfer.Designer.cs">
+    <Compile Include="Dashboard\MoneyTransfer.Designer.cs">
       <DependentUpon>MoneyTransfer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -96,13 +96,13 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Withdraw.cs">
+    <Compile Include="Dashboard\Withdraw.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Withdraw.Designer.cs">
+    <Compile Include="Dashboard\Withdraw.Designer.cs">
       <DependentUpon>Withdraw.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="Dashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">

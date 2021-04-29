@@ -22,8 +22,8 @@ namespace BankSystem
 
       private void btnBack_Click(object sender, EventArgs e)
       {
-         Register register = new Register();
-         register.Show();
+         Home home = new Home();
+         home.Show();
          Hide();
       }
 

@@ -55,6 +55,9 @@ namespace BankSystem
          this.label10 = new System.Windows.Forms.Label();
          this.labelConfirmPassword = new System.Windows.Forms.Label();
          this.labelEmail = new System.Windows.Forms.Label();
+         this.labelUsername = new System.Windows.Forms.Label();
+         this.label11 = new System.Windows.Forms.Label();
+         this.comboBox1 = new System.Windows.Forms.ComboBox();
          this.SuspendLayout();
          // 
          // label1
@@ -78,7 +81,7 @@ namespace BankSystem
          // label3
          // 
          this.label3.AutoSize = true;
-         this.label3.Location = new System.Drawing.Point(420, 76);
+         this.label3.Location = new System.Drawing.Point(448, 72);
          this.label3.Name = "label3";
          this.label3.Size = new System.Drawing.Size(48, 13);
          this.label3.TabIndex = 6;
@@ -87,7 +90,7 @@ namespace BankSystem
          // label4
          // 
          this.label4.AutoSize = true;
-         this.label4.Location = new System.Drawing.Point(433, 166);
+         this.label4.Location = new System.Drawing.Point(461, 162);
          this.label4.Name = "label4";
          this.label4.Size = new System.Drawing.Size(35, 13);
          this.label4.TabIndex = 7;
@@ -125,7 +128,7 @@ namespace BankSystem
          // label6
          // 
          this.label6.AutoSize = true;
-         this.label6.Location = new System.Drawing.Point(60, 338);
+         this.label6.Location = new System.Drawing.Point(60, 308);
          this.label6.Name = "label6";
          this.label6.Size = new System.Drawing.Size(45, 13);
          this.label6.TabIndex = 15;
@@ -140,7 +143,7 @@ namespace BankSystem
          // 
          // txtAddress
          // 
-         this.txtAddress.Location = new System.Drawing.Point(487, 73);
+         this.txtAddress.Location = new System.Drawing.Point(515, 69);
          this.txtAddress.Name = "txtAddress";
          this.txtAddress.Size = new System.Drawing.Size(183, 20);
          this.txtAddress.TabIndex = 1;
@@ -159,10 +162,11 @@ namespace BankSystem
          this.txtUsername.Name = "txtUsername";
          this.txtUsername.Size = new System.Drawing.Size(183, 20);
          this.txtUsername.TabIndex = 3;
+         this.txtUsername.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyUp);
          // 
          // txtMobileNo
          // 
-         this.txtMobileNo.Location = new System.Drawing.Point(487, 118);
+         this.txtMobileNo.Location = new System.Drawing.Point(515, 114);
          this.txtMobileNo.Name = "txtMobileNo";
          this.txtMobileNo.Size = new System.Drawing.Size(183, 20);
          this.txtMobileNo.TabIndex = 8;
@@ -171,7 +175,7 @@ namespace BankSystem
          // rbtnGenderOthers
          // 
          this.rbtnGenderOthers.AutoSize = true;
-         this.rbtnGenderOthers.Location = new System.Drawing.Point(279, 338);
+         this.rbtnGenderOthers.Location = new System.Drawing.Point(287, 308);
          this.rbtnGenderOthers.Name = "rbtnGenderOthers";
          this.rbtnGenderOthers.Size = new System.Drawing.Size(56, 17);
          this.rbtnGenderOthers.TabIndex = 12;
@@ -182,7 +186,7 @@ namespace BankSystem
          // rbtnGenderFemale
          // 
          this.rbtnGenderFemale.AutoSize = true;
-         this.rbtnGenderFemale.Location = new System.Drawing.Point(214, 338);
+         this.rbtnGenderFemale.Location = new System.Drawing.Point(222, 308);
          this.rbtnGenderFemale.Name = "rbtnGenderFemale";
          this.rbtnGenderFemale.Size = new System.Drawing.Size(59, 17);
          this.rbtnGenderFemale.TabIndex = 13;
@@ -193,7 +197,7 @@ namespace BankSystem
          // rbtnGenderMale
          // 
          this.rbtnGenderMale.AutoSize = true;
-         this.rbtnGenderMale.Location = new System.Drawing.Point(160, 338);
+         this.rbtnGenderMale.Location = new System.Drawing.Point(168, 308);
          this.rbtnGenderMale.Name = "rbtnGenderMale";
          this.rbtnGenderMale.Size = new System.Drawing.Size(48, 17);
          this.rbtnGenderMale.TabIndex = 14;
@@ -219,7 +223,7 @@ namespace BankSystem
          // 
          // txtEmail
          // 
-         this.txtEmail.Location = new System.Drawing.Point(487, 163);
+         this.txtEmail.Location = new System.Drawing.Point(515, 159);
          this.txtEmail.Name = "txtEmail";
          this.txtEmail.Size = new System.Drawing.Size(183, 20);
          this.txtEmail.TabIndex = 18;
@@ -228,7 +232,7 @@ namespace BankSystem
          // label8
          // 
          this.label8.AutoSize = true;
-         this.label8.Location = new System.Drawing.Point(420, 121);
+         this.label8.Location = new System.Drawing.Point(448, 117);
          this.label8.Name = "label8";
          this.label8.Size = new System.Drawing.Size(51, 13);
          this.label8.TabIndex = 19;
@@ -236,7 +240,7 @@ namespace BankSystem
          // 
          // txtPassword
          // 
-         this.txtPassword.Location = new System.Drawing.Point(160, 249);
+         this.txtPassword.Location = new System.Drawing.Point(515, 201);
          this.txtPassword.Name = "txtPassword";
          this.txtPassword.Size = new System.Drawing.Size(183, 20);
          this.txtPassword.TabIndex = 20;
@@ -245,7 +249,7 @@ namespace BankSystem
          // label9
          // 
          this.label9.AutoSize = true;
-         this.label9.Location = new System.Drawing.Point(60, 249);
+         this.label9.Location = new System.Drawing.Point(439, 204);
          this.label9.Name = "label9";
          this.label9.Size = new System.Drawing.Size(56, 13);
          this.label9.TabIndex = 21;
@@ -253,7 +257,7 @@ namespace BankSystem
          // 
          // txtConfirmPassword
          // 
-         this.txtConfirmPassword.Location = new System.Drawing.Point(160, 293);
+         this.txtConfirmPassword.Location = new System.Drawing.Point(515, 245);
          this.txtConfirmPassword.Name = "txtConfirmPassword";
          this.txtConfirmPassword.Size = new System.Drawing.Size(183, 20);
          this.txtConfirmPassword.TabIndex = 22;
@@ -263,7 +267,7 @@ namespace BankSystem
          // label10
          // 
          this.label10.AutoSize = true;
-         this.label10.Location = new System.Drawing.Point(60, 296);
+         this.label10.Location = new System.Drawing.Point(415, 248);
          this.label10.Name = "label10";
          this.label10.Size = new System.Drawing.Size(94, 13);
          this.label10.TabIndex = 23;
@@ -272,28 +276,63 @@ namespace BankSystem
          // labelConfirmPassword
          // 
          this.labelConfirmPassword.AutoSize = true;
-         this.labelConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.labelConfirmPassword.Location = new System.Drawing.Point(387, 297);
+         this.labelConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelConfirmPassword.Location = new System.Drawing.Point(704, 255);
          this.labelConfirmPassword.Name = "labelConfirmPassword";
-         this.labelConfirmPassword.Size = new System.Drawing.Size(20, 16);
+         this.labelConfirmPassword.Size = new System.Drawing.Size(19, 13);
          this.labelConfirmPassword.TabIndex = 25;
          this.labelConfirmPassword.Text = "....";
          // 
          // labelEmail
          // 
          this.labelEmail.AutoSize = true;
-         this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.labelEmail.Location = new System.Drawing.Point(676, 167);
+         this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelEmail.Location = new System.Drawing.Point(704, 163);
          this.labelEmail.Name = "labelEmail";
-         this.labelEmail.Size = new System.Drawing.Size(20, 16);
+         this.labelEmail.Size = new System.Drawing.Size(19, 13);
          this.labelEmail.TabIndex = 26;
          this.labelEmail.Text = "....";
+         // 
+         // labelUsername
+         // 
+         this.labelUsername.AutoSize = true;
+         this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.labelUsername.Location = new System.Drawing.Point(349, 163);
+         this.labelUsername.Name = "labelUsername";
+         this.labelUsername.Size = new System.Drawing.Size(19, 13);
+         this.labelUsername.TabIndex = 27;
+         this.labelUsername.Text = "....";
+         // 
+         // label11
+         // 
+         this.label11.AutoSize = true;
+         this.label11.Location = new System.Drawing.Point(60, 255);
+         this.label11.Name = "label11";
+         this.label11.Size = new System.Drawing.Size(40, 13);
+         this.label11.TabIndex = 29;
+         this.label11.Text = "Status:";
+         // 
+         // comboBox1
+         // 
+         this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+         this.comboBox1.FormattingEnabled = true;
+         this.comboBox1.Items.AddRange(new object[] {
+            "Single",
+            "Married",
+            "Divorced"});
+         this.comboBox1.Location = new System.Drawing.Point(160, 252);
+         this.comboBox1.Name = "comboBox1";
+         this.comboBox1.Size = new System.Drawing.Size(121, 21);
+         this.comboBox1.TabIndex = 30;
          // 
          // Register
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(800, 450);
+         this.Controls.Add(this.comboBox1);
+         this.Controls.Add(this.label11);
+         this.Controls.Add(this.labelUsername);
          this.Controls.Add(this.labelEmail);
          this.Controls.Add(this.labelConfirmPassword);
          this.Controls.Add(this.label10);
@@ -321,6 +360,7 @@ namespace BankSystem
          this.Controls.Add(this.txtAddress);
          this.Controls.Add(this.txtFirstName);
          this.Name = "Register";
+         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Register";
          this.ResumeLayout(false);
          this.PerformLayout();
@@ -354,5 +394,8 @@ namespace BankSystem
       private System.Windows.Forms.Label label10;
       private System.Windows.Forms.Label labelConfirmPassword;
       private System.Windows.Forms.Label labelEmail;
+      private System.Windows.Forms.Label labelUsername;
+      private System.Windows.Forms.Label label11;
+      private System.Windows.Forms.ComboBox comboBox1;
    }
 }
